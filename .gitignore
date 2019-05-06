@@ -1,0 +1,17 @@
+# stuff from antlr4
+*.class
+*.interp
+*.tokens
+bcLexer.java
+bcParser.java
+bcBaseListener.java
+bcListener.java
+
+# stuff from ocamlbuild
+_build/
+.merlin
+*.byte
+
+*.swp
+
+*.out

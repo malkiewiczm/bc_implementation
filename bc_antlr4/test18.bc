@@ -1,0 +1,25 @@
+/* recursive fibonacci test */
+
+define fib(n) {
+	if (n <= 1) {
+		return 1
+	}
+	return fib(n - 2) + fib(n - 1)
+}
+
+fib(1)
+fib(2)
+fib(3)
+fib(4)
+fib(5)
+fib(10)
+
+/*
+expected:
+1.0
+2.0
+3.0
+5.0
+8.0
+89.0
+*/

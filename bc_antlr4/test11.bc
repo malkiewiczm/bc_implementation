@@ -1,0 +1,21 @@
+/* function calls */
+define f(x, y) {
+	return x * 10 + y;
+}
+define g() {
+	return 5;
+}
+
+f(1, 2)
+g()
+f(4, 5) + g()
+f(4, g())
+
+/*
+expected:
+12.0
+5.0
+50.0
+45.0
+*/
+

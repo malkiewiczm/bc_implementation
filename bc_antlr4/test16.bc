@@ -1,0 +1,8 @@
+/* test break statement when not in loop */
+
+break
+
+/*
+expected:
+error saying that break was called outside of a loop
+*/

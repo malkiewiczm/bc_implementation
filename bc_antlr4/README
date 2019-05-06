@@ -1,0 +1,44 @@
+Compile with:
+
+antlr4 bc.g4 && javac *.java
+
+Run with:
+
+java Program filename.bc
+
+You can use "-" for the file name if you want to read from stdin, you
+can add "debug" to the arguments if you want to view the mnemonics
+used.
+
+My Scoping Rules:
+
+Everything is in the global score except for function parameters. This
+allows recursive functions to work per the specs, but any other
+variable assignment in the function will not be a local variable.
+
+Instead of making an AST, I make a set of mnemonics that control the
+program (like push and jmp), and then directly run this like a virtual
+machine... to view it pass the argument like so:
+
+java Program filename.bc debug
+
+One behavior that I changed from bc is regarding the continue
+statement: it appears that bc only likes continues in for loops (not
+in while), and it doesn't quite work like the way a continue statement
+does in C, C++, or Java.  I decided to make my continue statement
+mimick those instead, and also work with while loops. To be honest, I
+still don't know if the continue statement in normal bc even works at
+all.
+
+There are 18 test cases I made labeled "test1.bc" "test2.bc" etc and
+also a shell script called "run test", which will run the same input
+in both bc and my parser comparing them side by side. This does happen
+to lose its value though when I deviated from the continue statement
+behavior in test10.bc, and in some other instances like the print
+statement where I format it differently.
+
+use the script like so:
+
+./run_test.sh test1.bc
+
+(or with whichever test you want)

@@ -1,0 +1,17 @@
+This repo contains two separate assignments for a class (programming
+language concepts) and there extensive tests.
+
+The folder titled "bc_antlr4" is a complete implentation of the posix
+program "bc", which stands for "basic calculator", but despite this
+actually has statements as complicated as function definitions, if
+statements, for and while loops, and calls to some built in
+functions. This project will take code (see the tests), parse it to an
+intermediate byte code, then run that byte code, all using java +
+antlr4.
+
+The folder title "bc_ocaml" is only an implmentation of the runtime
+for bc. It assumes that you are given the abstract syntax tree of a bc
+program, and then it will run it. The reason this is present in this
+repo is mainly for good taste, to show how much more elegent things
+are in a functional language compared to java.
+

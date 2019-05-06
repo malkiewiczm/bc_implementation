@@ -1,0 +1,8 @@
+/* test continue statement when not in loop */
+
+continue
+
+/*
+expected:
+error saying that continue was called outside of a loop
+*/

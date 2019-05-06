@@ -1,0 +1,14 @@
+/* test print */
+/* (print is different from a normal function call apparently) */
+print(1, 2, 3)
+print 1,2,3
+print 1+2+3
+print(5)
+
+/*
+expected:
+1.0 2.0 3.0
+1.0 2.0 3.0
+6.0
+5.0
+*/

@@ -1,0 +1,9 @@
+run tests with:
+
+dune runtest
+
+every block starts a new scope, even the if statements, which is not
+how bc does it... but I think this makes more sense
+
+there is no mod operator (%) as in ocaml it doesn't work between
+floats... bc's mod operator is very strange and hard to mimick

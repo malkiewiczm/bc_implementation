@@ -1,0 +1,7 @@
+/* error checking (no function call) */
+hello(1, 2, 3)
+
+/*
+expected:
+error along the lines of "function does not exist"
+*/
